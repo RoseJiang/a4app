@@ -10,16 +10,19 @@ import { DataService } from './service/data.service';
 import { NavigationComponent } from './components/navigation/navigation.component';
 
 import { RouterModule, Routes } from '@angular/router';
+import { UserdetailsComponent } from './components/userdetails/userdetails.component';
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
-  { path: 'user', component: UserComponent}
+  { path: 'user', component: UserComponent},
+  { path: 'user/:id', component: UserdetailsComponent}
 ];
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     HomeComponent,
-    NavigationComponent
+    NavigationComponent,
+    UserdetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -28,6 +28,7 @@
 		    </ul>
             <button (click)="onEdit(user)" class="btn btn-danger">编辑</button>
             <button (click)="onDelete(user.id)" class="btn btn-danger">删除</button>
+            <a [(routerLink)]="'/user/' + user.id" class="btn btn-primary pull-right">详细信息</a>
 	    </div>
 
     </div>

@@ -11,6 +11,11 @@ export class DataService{
 		//this.users = ['a', 'b', 'c'];
 	}
 
+	getSingleUser(id) {
+        return this.http.get("http://jsonplaceholder.typicode.com/users/" + id)
+		            .map(res => res.json());
+	}
+
 	getUsers() {
 		return this.http.get("http://jsonplaceholder.typicode.com/users")
 		            .map(res => res.json());
